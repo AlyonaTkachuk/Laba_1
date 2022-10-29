@@ -1,5 +1,7 @@
 class Theatre extends Place{
-
+    //наследует переменные и методы от класса "Место", и имеет 2 свои переменные,
+    // которые сообщают о наличии балкона и оркустровой ямы
+    // описана реализация унаследованных методов
     public Boolean balcony, orchestra_pit;
 
     public Theatre(){
@@ -22,12 +24,12 @@ class Theatre extends Place{
     public void display(){
     }
     @Override
-    public void print_info() {
+    public void print_info() {//для читаемого вывода информации
         System.out.println("Theatre: " + getName());
         System.out.println("Address: " + getAddress());
         System.out.println("Capacity: " + getCapacity());
         System.out.println("Event: " + getEvent());
-        if (!balcony){
+        if (!balcony){//более понятный вариант для пользователя
         System.out.println("balcony: nope");}
         else {
             System.out.println("balcony: have");

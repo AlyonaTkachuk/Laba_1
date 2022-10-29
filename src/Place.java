@@ -1,15 +1,20 @@
-abstract class Place {//абстрактный класс, "прородитель" всех остальных классов
-
+abstract class Place {//абстрактный класс под наименованием "Место", "прородитель" всех остальных классов
+    //в данном классе есть 4 переменные, а именно: название, вместительность, мероприятие и адрес.
+    //данные переменные являются общими для всех наследующих классив и чтобы не повторяться были занесенв сюда
+    //также определены методы, которые потом используются в остальных классах
     private String name;
     private String capacity;
     private String event;
     private String address;
 
-    public String getName() { return name; }
+    public String getName() { return name; }//т.к. класс абстрактный, то просто так обращаться и переприсваивать
+    // его переменные нельзя, но можно возвращать эти переменные и уже с ними взаимодействовать
     public void setName(String name){
         this.name=name;
     }
-    public String getCapacity() { return capacity; }
+    public String getCapacity() { return capacity; }//т.к. переменные являются приватными, то за пределами класса
+    // не получится обратиться напрямую. метод геттер предоставляет доступ к полю
+    // сеттер же может менять значение данного поля
     public void setCapacity(String capacity){
         this.capacity=capacity;
     }
@@ -20,6 +25,7 @@ abstract class Place {//абстрактный класс, "прородител
         this.address=address;
     }
 
+    //все три конструктора аналогичны в остальных классах
     public Place(){//конструктор без параметров
         this.name="Земля";
         this.capacity="8 млрд";

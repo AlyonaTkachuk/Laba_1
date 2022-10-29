@@ -4,25 +4,33 @@ import java.io.InputStreamReader;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String na, ca, ev, ad;
+        //класс InputStreamReader преобразует набор байтов в символ
+        // Класс BufferedReader буферизует ввод, обеспечивая считывание из потока ввода
+        // необходимо для корректного ввода с клавиатуры
+        String new_name, new_capacity, new_event, new_address;
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));
+
         System.out.println("Введите название театра");
-        na = reader.readLine();
+        new_name = reader.readLine();
         System.out.println("Введите вместимость");
-        ca = reader.readLine();
+        new_capacity = reader.readLine();
         System.out.println("Введите название мероприятия");
-        ev = reader.readLine();
+        new_event = reader.readLine();
         System.out.println("Введите адрес");
-        ad = reader.readLine();
+        new_address = reader.readLine();
 
         System.out.println("Информация о театре");
-        Theatre Big_dom = new Theatre(na,ca,ev,ad , false, true);
-        Big_dom.print_info();
+        Theatre Volkov_Theatre = new Theatre(new_name, new_capacity, new_event, new_address,true,false);
+        Volkov_Theatre.print_info();
 
         System.out.println("Информация о ночном клубе");
-        Night_club opa = new Night_club();
-        opa.print_info();
+        Night_club Club_Honey = new Night_club();
+        Club_Honey.print_info();
+
+        System.out.println("Информация о концертном зале");
+        Concert_hall Millennium = new Concert_hall();
+        Millennium.print_info();
 
     }
 }

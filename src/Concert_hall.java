@@ -1,22 +1,25 @@
 class Concert_hall extends Place{
+    //наследует переменные и методы от класса "Место", и имеет 2 свои переменные,
+    // которые сообщают о наличии балкона и оркустровой ямы
+    // описана реализация унаследованных методов
 
-    public Boolean balcon, orchestra_pi;
+    public Boolean balcony, orchestra_pit;
 
     public Concert_hall(){
-        this.balcon = false;
-        this.orchestra_pi = true;
+        this.balcony = false;
+        this.orchestra_pit = true;
     }
 
     public Concert_hall(String name, String capacity, String event, String address, Boolean have_b, Boolean have_o){
         super(name, capacity, event, address);
-        this.balcon = have_b;
-        this.orchestra_pi = have_o;
+        this.balcony = have_b;
+        this.orchestra_pit = have_o;
 
     }
     public Concert_hall(Concert_hall concert_hall, String name, String capacity, String event, String address){
         super(name, capacity, event, address);
-        this.balcon = concert_hall.balcon;
-        this.orchestra_pi = concert_hall.orchestra_pi;
+        this.balcony = concert_hall.balcony;
+        this.orchestra_pit = concert_hall.orchestra_pit;
     }
 
     public void display(){
@@ -27,12 +30,12 @@ class Concert_hall extends Place{
         System.out.println("Address: " + getAddress());
         System.out.println("Capacity: " + getCapacity());
         System.out.println("Event: " + getEvent());
-        if (!balcon){
+        if (!balcony){
             System.out.println("balcony: nope");}
         else {
             System.out.println("balcony: have");
         }
-        if (!orchestra_pi){
+        if (!orchestra_pit){
             System.out.println("orchestra_pity: nope");}
         else {
             System.out.println("orchestra_pit: have");
