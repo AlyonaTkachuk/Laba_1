@@ -7,6 +7,7 @@ public class Main {
         //класс InputStreamReader преобразует набор байтов в символ
         // Класс BufferedReader буферизует ввод, обеспечивая считывание из потока ввода
         // необходимо для корректного ввода с клавиатуры
+
         String new_name, new_capacity, new_event, new_address;
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));

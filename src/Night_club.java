@@ -1,7 +1,7 @@
 class Night_club extends Place{
     //наследует переменные и методы от класса "Место", и имеет свою переменную,
     // которые сообщают о наличии второго этажа
-    // описана реализация унаследованных методов
+    //  описана реализация унаследованных методов
     public Boolean second_floor;
     public Night_club(){
         this.second_floor = false;
@@ -15,8 +15,7 @@ class Night_club extends Place{
         this.second_floor = night_club.second_floor;
     }
 
-    public void display(){
-    }
+    public void display(){}
     @Override
     public void print_info() {
         System.out.println("Night_club: " + getName() );
